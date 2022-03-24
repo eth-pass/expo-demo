@@ -23,8 +23,8 @@ export default function ModalScreen() {
     contractAddress,
     tokenId,
     chainId,
-    passOwner,
-  } = payload;
+    ownerAddress,
+  }: any = payload;
 
   useEffect(() => {
     const checkBarcode = async () => {
@@ -71,8 +71,8 @@ export default function ModalScreen() {
             {valid ? "Valid" : "Invalid"}
           </Text>
           <View style={styles.separator} />
-          <Text style={styles.title}>Pass Owner:</Text>
-          <Text>{passOwner}</Text>
+          <Text style={styles.title}>Owner Address:</Text>
+          <Text>{ownerAddress}</Text>
           <View style={styles.separator} />
 
           <Text style={styles.title}>Contract Address:</Text>
